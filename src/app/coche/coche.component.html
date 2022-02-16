@@ -1,1 +1,17 @@
-<p>coche works!</p>
+<h1>Titulo coche</h1>
+
+
+
+<div *ngFor="let coche of Coches">
+
+<h5>{{coche.name}}</h5>
+<p>{{coche.description}}</p>
+<a [routerLink]="['/coche/', coche.id]">Check Product</a>
+
+</div>
+
+<div *ngIf="id">
+
+    Id del coche: {{id}}
+    <button (click)="onBack()">Volver</button>
+</div>

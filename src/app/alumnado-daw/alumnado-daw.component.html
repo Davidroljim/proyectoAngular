@@ -1,2 +1,20 @@
+<p>Titulo Alumnado</p>
 
-<h1>{{titulo}}</h1> 
+
+<div *ngIf="curso">
+
+    
+    
+    <div *ngIf="alumnadoUno==true">
+        <ul *ngFor="let alumno of alumnos">
+            <li *ngIf="alumno.curso=='1'">{{alumno.nombre}}</li>
+        </ul>
+        <button (click)="alumnado('primero')">alumnado1</button>
+</div>
+
+<button (click)="alumnado('segundo')">alumnado2</button>
+<div *ngIf="alumnadoSegundo==true">
+    <ul *ngFor="let alumno of alumnos">
+        <li *ngIf="alumno.curso=='2'">{{alumno.nombre}}</li>
+    </ul>
+</div>

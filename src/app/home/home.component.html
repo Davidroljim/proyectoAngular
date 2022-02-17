@@ -1,2 +1,12 @@
 <p>home works!</p>
-<button (click)="onBack()">Listado Daw</button>
+<ul>
+    <li *ngFor ="let elemento of ropa; let i = index">
+
+        {{ropa}}
+        
+    </li>
+</ul>
+
+<input type="text" [(ngModel)]="prenda"/>
+<button (click)="anadirRopa(prenda)">Añadir ropa</button>
+
